@@ -7,8 +7,8 @@ import json
 from tqdm import tqdm
 import numpy as np
 from glob import glob
-from ornaments_evaluation import ornament_evaluate_folder
-from ornaments_post_processing import ornaments_post_processing_fn
+from exps.Ornaments.ornaments_evaluation import ornament_evaluate_folder
+from exps.Ornaments.ornaments_post_processing import ornaments_post_processing_fn
 import tempfile
 
 

@@ -6,9 +6,9 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir, os.path.pardir)))
 from doc_seg.loader import LoadedModel
-from ornaments_post_processing import ornaments_post_processing_fn
 from exps.post_processing import boxes_detection
 from exps.evaluation.base import format_quad_to_string
+from exps.Ornaments.ornaments_post_processing import ornaments_post_processing_fn
 from tqdm import tqdm
 import numpy as np
 import argparse

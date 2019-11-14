@@ -5,8 +5,9 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir, os.path.pardir)))
 from doc_seg.loader import LoadedModel
-from doc_seg.post_processing import page_post_processing_fn, boxes_detection
+from doc_seg.post_processing import boxes_detection
 from doc_seg.evaluation.extraction import format_quad_to_string
+from exps import page_post_processing_fn
 import tensorflow as tf
 from tqdm import tqdm
 import numpy as np

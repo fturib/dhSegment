@@ -158,7 +158,7 @@ def extract_line_polygons(lines_mask):
 
 def vertical_local_maxima(probs):
     local_maxima = np.zeros_like(probs, dtype=bool)
-    local_maxima[1:-1] = (probs[1:-1] => probs[:-2]) & (probs[2:] <= probs[1:-1])
+    local_maxima[1:-1] = (probs[1:-1] >= probs[:-2]) & (probs[2:] <= probs[1:-1])
     local_maxima = cv2.morphologyEx(local_maxima.astype(np.uint8), cv2.MORPH_CLOSE, np.ones((5, 5), dtype=np.uint8))
     return local_maxima > 0
 
